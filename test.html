@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<style>
+body{background:#1a0a2e;color:#fff;font-family:-apple-system,sans-serif;padding:20px;text-align:center;}
+h2{color:#f4c430;margin-bottom:20px;}
+.num{font-size:80px;font-weight:900;color:#f4c430;display:block;margin:10px auto;}
+button{display:block;width:100%;padding:24px;font-size:22px;font-weight:900;
+  background:#6a1fc2;color:#fff;border:none;border-radius:12px;margin:10px 0;}
+#log{font-size:13px;color:#a855f7;margin-top:20px;text-align:left;line-height:2;}
+</style>
+</head>
+<body>
+<h2>Safari Update Test</h2>
+<p style="color:#c4aee0;font-size:13px;">Tap the button - does the number change instantly?</p>
+
+<span class="num" id="counter">0</span>
+<button onclick="doCount()">TAP ME</button>
+
+<div id="log"></div>
+
+<script>
+var n = 0;
+function doCount() {
+  n++;
+  document.getElementById('counter').textContent = n;
+  document.getElementById('log').innerHTML += 'Tapped: ' + n + '<br>';
+}
+</script>
+</body>
+</html>
